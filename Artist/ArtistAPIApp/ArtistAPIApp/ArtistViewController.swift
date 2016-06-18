@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ArtistViewController: UIViewController {
+class ArtistViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var artistText: UITextField!
     @IBOutlet weak var artistView: UITableView!
   
-    
-    
     let session = NSURLSession.sharedSession()
     var artistsArray = [Artist]()
     

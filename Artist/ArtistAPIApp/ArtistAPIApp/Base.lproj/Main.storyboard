@@ -35,6 +35,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wSi-FT-88f">
+                                <rect key="frame" x="0.0" y="57" width="600" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="tgT-hY-gKJ">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tgT-hY-gKJ" id="5gT-5T-nWD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iWL-64-aEi" id="wxM-nc-eHH"/>
+                                    <outlet property="delegate" destination="iWL-64-aEi" id="DO9-9e-tcf"/>
+                                </connections>
+                            </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXo-z5-8bL">
                                 <rect key="frame" x="8" y="72" width="584" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -43,49 +61,17 @@
                                     <outlet property="delegate" destination="iWL-64-aEi" id="cP4-aQ-Jao"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wSi-FT-88f">
-                                <rect key="frame" x="0.0" y="127" width="600" height="473"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="510" id="Bqe-D5-aIY"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="tgT-hY-gKJ">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tgT-hY-gKJ" id="5gT-5T-nWD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Bqe-D5-aIY"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="iWL-64-aEi" id="wxM-nc-eHH"/>
-                                    <outlet property="delegate" destination="iWL-64-aEi" id="DO9-9e-tcf"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wSi-FT-88f" firstAttribute="top" secondItem="QXo-z5-8bL" secondAttribute="bottom" constant="25" id="0aA-jM-Etu"/>
-                            <constraint firstItem="QXo-z5-8bL" firstAttribute="leading" secondItem="yWn-8I-mcT" secondAttribute="leading" constant="8" id="BGA-bv-8Pa"/>
-                            <constraint firstAttribute="trailing" secondItem="wSi-FT-88f" secondAttribute="trailing" id="EXt-EZ-MLB"/>
-                            <constraint firstAttribute="trailing" secondItem="QXo-z5-8bL" secondAttribute="trailing" constant="8" id="GfQ-dR-kOb"/>
-                            <constraint firstItem="QXo-z5-8bL" firstAttribute="top" secondItem="EqL-6c-RIv" secondAttribute="bottom" constant="8" symbolic="YES" id="P1B-ZV-w1u"/>
-                            <constraint firstItem="wSi-FT-88f" firstAttribute="leading" secondItem="yWn-8I-mcT" secondAttribute="leading" id="QlD-Yo-mzv"/>
-                            <constraint firstItem="QXo-z5-8bL" firstAttribute="top" secondItem="EqL-6c-RIv" secondAttribute="bottom" constant="8" id="VHa-UU-D57"/>
-                            <constraint firstItem="UAY-wO-TC7" firstAttribute="top" secondItem="wSi-FT-88f" secondAttribute="bottom" id="vbL-XK-I1m"/>
+                            <constraint firstItem="wSi-FT-88f" firstAttribute="leading" secondItem="yWn-8I-mcT" secondAttribute="leading" id="QMG-bj-e8n"/>
+                            <constraint firstItem="wSi-FT-88f" firstAttribute="top" secondItem="QXo-z5-8bL" secondAttribute="bottom" constant="-45" id="ejG-Yy-KlQ"/>
+                            <constraint firstItem="QXo-z5-8bL" firstAttribute="leading" secondItem="yWn-8I-mcT" secondAttribute="leading" constant="8" id="jTc-ae-fKk"/>
+                            <constraint firstAttribute="trailing" secondItem="wSi-FT-88f" secondAttribute="trailing" id="pu5-IQ-ock"/>
+                            <constraint firstItem="UAY-wO-TC7" firstAttribute="top" secondItem="wSi-FT-88f" secondAttribute="bottom" id="tO4-Lk-mFM"/>
+                            <constraint firstItem="QXo-z5-8bL" firstAttribute="top" secondItem="EqL-6c-RIv" secondAttribute="bottom" constant="8" id="wwh-ZG-GqZ"/>
+                            <constraint firstAttribute="trailing" secondItem="QXo-z5-8bL" secondAttribute="trailing" constant="8" id="zbn-lF-M5j"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="VHa-UU-D57"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="artistText" destination="QXo-z5-8bL" id="RG2-K6-ZXe"/>

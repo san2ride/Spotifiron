@@ -86,6 +86,8 @@
 		A4D476FC1D13558E00D1AAD7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A42A83B01D15E49000D92B42 /* Album.swift */,
+				A42A839F1D14BE6400D92B42 /* Artist.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -93,8 +95,6 @@
 		A4D476FD1D13559500D1AAD7 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				A42A83B01D15E49000D92B42 /* Album.swift */,
-				A42A839F1D14BE6400D92B42 /* Artist.swift */,
 				A4D477081D13BF6D00D1AAD7 /* Constants.swift */,
 			);
 			name = Modals;
