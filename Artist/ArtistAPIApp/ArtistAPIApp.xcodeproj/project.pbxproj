@@ -10,7 +10,7 @@
 		A42A839C1D149FF100D92B42 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A839B1D149FF100D92B42 /* AlbumViewController.swift */; };
 		A42A83A01D14BE6400D92B42 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A839F1D14BE6400D92B42 /* Artist.swift */; };
 		A42A83A21D15BC5D00D92B42 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83A11D15BC5D00D92B42 /* ArtistViewController.swift */; };
-		A42A83AF1D15E31200D92B42 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83AE1D15E31200D92B42 /* Album.swift */; };
+		A42A83B11D15E49000D92B42 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83B01D15E49000D92B42 /* Album.swift */; };
 		A4D476EA1D13557400D1AAD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D476E91D13557400D1AAD7 /* AppDelegate.swift */; };
 		A4D476EF1D13557400D1AAD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D476ED1D13557400D1AAD7 /* Main.storyboard */; };
 		A4D476F11D13557400D1AAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D476F01D13557400D1AAD7 /* Assets.xcassets */; };
@@ -22,7 +22,7 @@
 		A42A839B1D149FF100D92B42 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		A42A839F1D14BE6400D92B42 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		A42A83A11D15BC5D00D92B42 /* ArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
-		A42A83AE1D15E31200D92B42 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../Album.swift; sourceTree = "<group>"; };
+		A42A83B01D15E49000D92B42 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A4D476E61D13557400D1AAD7 /* ArtistAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtistAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D476E91D13557400D1AAD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D476EE1D13557400D1AAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		A4D476FD1D13559500D1AAD7 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				A42A83AE1D15E31200D92B42 /* Album.swift */,
+				A42A83B01D15E49000D92B42 /* Album.swift */,
 				A42A839F1D14BE6400D92B42 /* Artist.swift */,
 				A4D477081D13BF6D00D1AAD7 /* Constants.swift */,
 			);
@@ -177,7 +177,7 @@
 				A42A83A21D15BC5D00D92B42 /* ArtistViewController.swift in Sources */,
 				A42A839C1D149FF100D92B42 /* AlbumViewController.swift in Sources */,
 				A4D476EA1D13557400D1AAD7 /* AppDelegate.swift in Sources */,
-				A42A83AF1D15E31200D92B42 /* Album.swift in Sources */,
+				A42A83B11D15E49000D92B42 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
