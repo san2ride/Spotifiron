@@ -159,6 +159,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("AlbumSegue", sender: self)
+    }
 }
 
 
