@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42A83A61D15C30200D92B42 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83A51D15C30200D92B42 /* AlbumViewController.swift */; };
+		A42A83AD1D15C61A00D92B42 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83AC1D15C61A00D92B42 /* Album.swift */; };
 		FDB75F681D14D04D00B6FEF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75F671D14D04D00B6FEF4 /* AppDelegate.swift */; };
 		FDB75F6A1D14D04D00B6FEF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75F691D14D04D00B6FEF4 /* ViewController.swift */; };
 		FDB75F6D1D14D04D00B6FEF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB75F6B1D14D04D00B6FEF4 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A42A83A51D15C30200D92B42 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		A42A83AC1D15C61A00D92B42 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		FDB75F641D14D04D00B6FEF4 /* SpotifySwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifySwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB75F671D14D04D00B6FEF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDB75F691D14D04D00B6FEF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42A83A71D15C30A00D92B42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FDB75F691D14D04D00B6FEF4 /* ViewController.swift */,
+				A42A83A51D15C30200D92B42 /* AlbumViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A42A83A81D15C32000D92B42 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				FDB75F951D14D09A00B6FEF4 /* Constants.swift */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		A42A83A91D15C35100D92B42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A42A83AC1D15C61A00D92B42 /* Album.swift */,
+				FDB75F971D14D0B600B6FEF4 /* Artist.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		FDB75F5B1D14D04D00B6FEF4 = {
 			isa = PBXGroup;
 			children = (
@@ -102,9 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				FDB75F671D14D04D00B6FEF4 /* AppDelegate.swift */,
-				FDB75F691D14D04D00B6FEF4 /* ViewController.swift */,
-				FDB75F951D14D09A00B6FEF4 /* Constants.swift */,
-				FDB75F971D14D0B600B6FEF4 /* Artist.swift */,
+				A42A83A81D15C32000D92B42 /* Modals */,
+				A42A83A91D15C35100D92B42 /* Views */,
+				A42A83A71D15C30A00D92B42 /* Controller */,
 				FDB75F6B1D14D04D00B6FEF4 /* Main.storyboard */,
 				FDB75F6E1D14D04D00B6FEF4 /* Assets.xcassets */,
 				FDB75F701D14D04D00B6FEF4 /* LaunchScreen.storyboard */,
@@ -199,6 +229,7 @@
 				TargetAttributes = {
 					FDB75F631D14D04D00B6FEF4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6D9CKTK39V;
 					};
 					FDB75F771D14D04D00B6FEF4 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -262,10 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42A83A61D15C30200D92B42 /* AlbumViewController.swift in Sources */,
 				FDB75F6A1D14D04D00B6FEF4 /* ViewController.swift in Sources */,
 				FDB75F681D14D04D00B6FEF4 /* AppDelegate.swift in Sources */,
 				FDB75F981D14D0B600B6FEF4 /* Artist.swift in Sources */,
 				FDB75F961D14D09A00B6FEF4 /* Constants.swift in Sources */,
+				A42A83AD1D15C61A00D92B42 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpotifySwiftApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FrostEnterprises.SpotifySwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -420,10 +456,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpotifySwiftApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FrostEnterprises.SpotifySwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -492,6 +531,7 @@
 				FDB75F8E1D14D04D00B6FEF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDB75F8F1D14D04D00B6FEF4 /* Build configuration list for PBXNativeTarget "SpotifySwiftAppTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +540,7 @@
 				FDB75F911D14D04D00B6FEF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDB75F921D14D04D00B6FEF4 /* Build configuration list for PBXNativeTarget "SpotifySwiftAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +549,7 @@
 				FDB75F941D14D04D00B6FEF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,17 +1,19 @@
 //
-//  ViewController.swift
-//  ApiJsonSwift
+//  ArtistViewController.swift
+//  ArtistAPIApp
 //
-//  Created by Taylor Frost on 6/16/16.
-//  Copyright © 2016 Taylor Frost. All rights reserved.
+//  Created by don't touch me on 6/18/16.
+//  Copyright © 2016 trvl, LLC. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
+class ArtistViewController: UIViewController {
+
+    @IBOutlet weak var artistText: UITextField!
+    @IBOutlet weak var artistView: UITableView!
+  
     
-    @IBOutlet weak var ArtistTextField: UITextField!
-    @IBOutlet weak var ArtistTableView: UITableView!
     
     let session = NSURLSession.sharedSession()
     var artistsArray = [Artist]()
@@ -102,7 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
                                             print(type)
                                             theArtist.type = type
                                         } else {
-                                            print("Icould not parse the item")
+                                            print("I could not parse the item")
                                         }
                                         
                                         self.artistsArray.append(theArtist)
@@ -111,7 +113,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
                                     print(self.artistsArray.count)
                                     
                                     dispatch_async(dispatch_get_main_queue(), {
-                                        self.ArtistTableView.reloadData()
+                                        self.artistView.reloadData()
                                     })
                                     
                                 } else {
@@ -137,12 +139,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         }
     }
     
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
     }
     
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.artistsArray.count
     }
@@ -155,8 +157,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         cell.textLabel?.text = artist.name
         
         return cell
-
-        } 
-
+        
+        
+    }
+    
 }
 
+    
+    
+    
+    
+    
+    

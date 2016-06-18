@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A42A839A1D14988900D92B42 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83991D14988900D92B42 /* Album.swift */; };
 		A42A839C1D149FF100D92B42 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A839B1D149FF100D92B42 /* AlbumViewController.swift */; };
-		A42A839E1D14BE5200D92B42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A839D1D14BE5200D92B42 /* ViewController.swift */; };
 		A42A83A01D14BE6400D92B42 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A839F1D14BE6400D92B42 /* Artist.swift */; };
+		A42A83A21D15BC5D00D92B42 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83A11D15BC5D00D92B42 /* ArtistViewController.swift */; };
+		A42A83AB1D15C53000D92B42 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A83AA1D15C53000D92B42 /* Album.swift */; };
 		A4D476EA1D13557400D1AAD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D476E91D13557400D1AAD7 /* AppDelegate.swift */; };
 		A4D476EF1D13557400D1AAD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D476ED1D13557400D1AAD7 /* Main.storyboard */; };
 		A4D476F11D13557400D1AAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D476F01D13557400D1AAD7 /* Assets.xcassets */; };
@@ -19,10 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A42A83991D14988900D92B42 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../Album.swift; sourceTree = "<group>"; };
 		A42A839B1D149FF100D92B42 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
-		A42A839D1D14BE5200D92B42 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A42A839F1D14BE6400D92B42 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		A42A83A11D15BC5D00D92B42 /* ArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		A42A83AA1D15C53000D92B42 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../Album.swift; sourceTree = "<group>"; };
 		A4D476E61D13557400D1AAD7 /* ArtistAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtistAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D476E91D13557400D1AAD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D476EE1D13557400D1AAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				A42A839B1D149FF100D92B42 /* AlbumViewController.swift */,
-				A42A839D1D14BE5200D92B42 /* ViewController.swift */,
+				A42A83A11D15BC5D00D92B42 /* ArtistViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -93,8 +93,8 @@
 		A4D476FD1D13559500D1AAD7 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				A42A83991D14988900D92B42 /* Album.swift */,
 				A42A839F1D14BE6400D92B42 /* Artist.swift */,
+				A42A83AA1D15C53000D92B42 /* Album.swift */,
 				A4D477081D13BF6D00D1AAD7 /* Constants.swift */,
 			);
 			name = Modals;
@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					A4D476E51D13557400D1AAD7 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6D9CKTK39V;
 					};
 				};
 			};
@@ -172,11 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42A83A01D14BE6400D92B42 /* Artist.swift in Sources */,
-				A42A839E1D14BE5200D92B42 /* ViewController.swift in Sources */,
 				A4D477091D13BF6D00D1AAD7 /* Constants.swift in Sources */,
+				A42A83A21D15BC5D00D92B42 /* ArtistViewController.swift in Sources */,
 				A42A839C1D149FF100D92B42 /* AlbumViewController.swift in Sources */,
 				A4D476EA1D13557400D1AAD7 /* AppDelegate.swift in Sources */,
-				A42A839A1D14988900D92B42 /* Album.swift in Sources */,
+				A42A83AB1D15C53000D92B42 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +290,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ArtistAPIApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jsanchezrides.ArtistAPIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -300,10 +304,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ArtistAPIApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jsanchezrides.ArtistAPIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
