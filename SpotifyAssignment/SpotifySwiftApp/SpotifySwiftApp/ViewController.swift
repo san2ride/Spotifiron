@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     
     let session = NSURLSession.sharedSession()
     var artistsArray = [Artist]()
-    var currentArtist = [Artist]()
+//    var currentArtist = [Artist]()
     
    
 
@@ -23,7 +23,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         super.viewDidLoad()
 
     }
-
+    // MARK: TextFieldShouldReturn Function
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         print("textFieldShouldReturn")
@@ -39,6 +40,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         
         return true
     }
+    
+    //MARK: Parsing the JSON
     
     func fetchArtists(query: String) {
         
@@ -140,6 +143,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         }
         
     }
+    
+    //MARK: Data Source Functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         

@@ -29,11 +29,13 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
         self.fetchAlbum(theArtist.artistID)
         
     }
+
+    //MARK: Parsing the JSON
     
     func fetchAlbum(query: String)
     {
         
-        let artistsURLString = "https://api.spotify.com/v1/search?q=\(query)&type=artist"
+        let artistsURLString = "https://api.spotify.com/v1/artists/%7Bid%7D/albums"
         
         if let url = NSURL(string: artistsURLString)
         {
@@ -139,6 +141,8 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
         
     }
     
+    //MARK: Data Source Functions
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -156,9 +160,6 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
         
         return cell
     }
-    
-
-    
     
 }
 
