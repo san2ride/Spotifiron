@@ -11,7 +11,7 @@ import UIKit
 class Artist: NSObject {
     
     var href: String = ""
-    var artistId: String = ""
+    var artistID: String = ""
     var name: String = ""
     var popularity: Int = 0
     var type: String = ""
@@ -20,7 +20,7 @@ class Artist: NSObject {
         super.init()
         
         self.href = ""
-        self.artistId = ""
+        self.artistID = ""
         self.name = ""
         self.popularity = 0
         self.type = ""

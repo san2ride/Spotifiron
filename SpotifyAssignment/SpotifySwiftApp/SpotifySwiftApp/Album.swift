@@ -11,7 +11,7 @@ import UIKit
 class Album: NSObject {
 
     var href: String = ""
-    var artId: String = ""
+    var artistID: String = ""
     var name: String = ""
     var type: String = ""
     var uri: String = ""
@@ -20,7 +20,7 @@ class Album: NSObject {
         super.init()
         
         self.href = ""
-        self.artId = ""
+        self.artistID = ""
         self.name = ""
         self.type = ""
         self.uri = ""

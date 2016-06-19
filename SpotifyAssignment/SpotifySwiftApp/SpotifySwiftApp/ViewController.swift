@@ -15,6 +15,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     
     let session = NSURLSession.sharedSession()
     var artistsArray = [Artist]()
+    var currentArtist = [Artist]()
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,45 +70,45 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
                                     
                                     for itemDict in itemsArray {
                                         
-                                        let theArtist = Artist()
+                                        let currentArtist = Artist()
                                         
                                         if let name = itemDict["name"] as? String {
                                             print(name)
-                                            theArtist.name = name
+                                            currentArtist.name = name
                                             
                                         } else {
                                             print("I could not parse the name")
                                         }
                                         
-                                        if let artistId = itemDict["id"] as? String {
-                                            print(artistId)
-                                            theArtist.artistId = artistId
+                                        if let artistID = itemDict["id"] as? String {
+                                            print(artistID)
+                                            currentArtist.artistID = artistID
                                         } else {
                                             print("I couldnt parse the artist id")
                                         }
                                         
                                         if let href = itemDict["href"] as? String {
                                             print(href)
-                                            theArtist.href = href
+                                            currentArtist.href = href
                                         } else {
                                             print("I could not parse the href")
                                         }
                                         
                                         if let popularity = itemDict["popularity"] as? Int {
                                             print(popularity)
-                                            theArtist.popularity = popularity
+                                            currentArtist.popularity = popularity
                                         } else {
                                             print("I could not parse the popularity")
                                         }
                                         
                                         if let type = itemDict["type"] as? String {
                                             print(type)
-                                            theArtist.type = type
+                                            currentArtist.type = type
                                         } else {
                                             print("I could not parse the item")
                                         }
                                         
-                                        self.artistsArray.append(theArtist)
+                                        self.artistsArray.append(currentArtist)
                                     }
                                     
                                     print(self.artistsArray.count)
@@ -135,6 +138,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
             task.resume()
             
         }
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -163,9 +167,18 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         
         self.performSegueWithIdentifier("AlbumSegue", sender: self)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "AlbumSegue" {
+            
+            if let destinationVC = segue.destinationViewController as? AlbumViewController {
+                destinationVC.theArtist = currentArtist
+            }
+    
+    }
+    }
+
+
 }
-
-
-
-
 

@@ -8,16 +8,25 @@
 
 import UIKit
 
-class AlbumViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate, UITableViewDelegate {
+class AlbumViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
     
     @IBOutlet weak var albumView: UITableView!
     
     let session = NSURLSession.sharedSession()
     var albumsArray = [Album]()
+    var theArtist = [Artist]()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear (animated:Bool){
+        super.viewWillAppear (animated)
+        
+        self.fetchAlbum(theArtist.artistID)
         
     }
     
@@ -65,9 +74,9 @@ class AlbumViewController: UIViewController, UITableViewDataSource, UITextFieldD
                                             print("I could not parse the href")
                                         }
                                         
-                                        if let artId = itemDict["id"] as? String {
-                                            print(artId)
-                                            theAlbum.artId = artId
+                                        if let artistID = itemDict["id"] as? String {
+                                            print(artistID)
+                                            theAlbum.artistID = artistID
                                         } else {
                                             print("I couldnt parse the artist id")
                                         }
@@ -148,7 +157,7 @@ class AlbumViewController: UIViewController, UITableViewDataSource, UITextFieldD
         return cell
     }
     
-//    last step perform segue
+
     
     
 }
