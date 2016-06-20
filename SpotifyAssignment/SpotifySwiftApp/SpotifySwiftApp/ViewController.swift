@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     
     let session = NSURLSession.sharedSession()
     var artistsArray = [Artist]()
-//    var currentArtist = [Artist]()
+    var currentArtist: Artist?
     
    
 
@@ -171,6 +171,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         self.performSegueWithIdentifier("AlbumSegue", sender: self)
+        
+        let artist = self.artistsArray[indexPath.row]
+        self.currentArtist = self.artistsArray[indexPath.row]
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

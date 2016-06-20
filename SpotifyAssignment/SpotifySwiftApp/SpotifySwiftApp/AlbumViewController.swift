@@ -14,9 +14,7 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
     
     let session = NSURLSession.sharedSession()
     var albumsArray = [Album]()
-    var theArtist = [Artist]()
-    
-    
+    var theArtist:Artist?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +24,10 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
     override func viewWillAppear (animated:Bool){
         super.viewWillAppear (animated)
         
-        self.fetchAlbum(theArtist.artistID)
+//        self.fetchAlbum(theArtist?.artistID)
+        
+        
+        //Need to unwrap the artistID
         
     }
 
@@ -35,7 +36,7 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
     func fetchAlbum(query: String)
     {
         
-        let artistsURLString = "https://api.spotify.com/v1/artists/%7Bid%7D/albums"
+        let artistsURLString = "https://api.spotify.com/v1/artists/\(query)/albums"
         
         if let url = NSURL(string: artistsURLString)
         {
@@ -141,7 +142,7 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
         
     }
     
-    //MARK: Data Source Functions
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -160,6 +161,9 @@ class AlbumViewController: UIViewController, UITableViewDataSource,  UITableView
         
         return cell
     }
+    
+
+    
     
 }
 
