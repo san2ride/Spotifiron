@@ -14,8 +14,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     @IBOutlet weak var ArtistTableView: UITableView!
     
     let session = NSURLSession.sharedSession()
+<<<<<<< Updated upstream
     var artistsArray = [Artist]()
     var currentArtist: Artist?
+=======
+    var albumsArray = [Album]()
+    var currentArtist = [Artist]()
+>>>>>>> Stashed changes
     
    
 

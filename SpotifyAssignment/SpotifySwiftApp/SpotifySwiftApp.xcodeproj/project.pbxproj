@@ -94,7 +94,8 @@
 		A42A83A81D15C32000D92B42 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				FDB75F951D14D09A00B6FEF4 /* Constants.swift */,
+				A42A83AC1D15C61A00D92B42 /* Album.swift */,
+				FDB75F971D14D0B600B6FEF4 /* Artist.swift */,
 			);
 			name = Modals;
 			sourceTree = "<group>";
@@ -102,8 +103,6 @@
 		A42A83A91D15C35100D92B42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A42A83AC1D15C61A00D92B42 /* Album.swift */,
-				FDB75F971D14D0B600B6FEF4 /* Artist.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -131,14 +130,15 @@
 		FDB75F661D14D04D00B6FEF4 /* SpotifySwiftApp */ = {
 			isa = PBXGroup;
 			children = (
-				FDB75F671D14D04D00B6FEF4 /* AppDelegate.swift */,
 				A42A83A81D15C32000D92B42 /* Modals */,
 				A42A83A91D15C35100D92B42 /* Views */,
 				A42A83A71D15C30A00D92B42 /* Controller */,
+				FDB75F951D14D09A00B6FEF4 /* Constants.swift */,
 				FDB75F6B1D14D04D00B6FEF4 /* Main.storyboard */,
 				FDB75F6E1D14D04D00B6FEF4 /* Assets.xcassets */,
-				FDB75F701D14D04D00B6FEF4 /* LaunchScreen.storyboard */,
 				FDB75F731D14D04D00B6FEF4 /* Info.plist */,
+				FDB75F701D14D04D00B6FEF4 /* LaunchScreen.storyboard */,
+				FDB75F671D14D04D00B6FEF4 /* AppDelegate.swift */,
 			);
 			path = SpotifySwiftApp;
 			sourceTree = "<group>";
